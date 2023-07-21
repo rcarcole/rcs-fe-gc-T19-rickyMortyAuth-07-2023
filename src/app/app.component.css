@@ -24,3 +24,12 @@ nav {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.search-container {
+  margin-right: 1em;
+}
+
+.margin-profile{
+  font-size: 2.5em;
+  margin-top: 0.05em;
+}
