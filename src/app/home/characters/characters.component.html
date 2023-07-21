@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3" *ngFor="let character of characters">
+            <div class="card">
+                <img class="card-img-top" [src]="character.image" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ character.name }}</h5>
+                    <button class="btn btn-lg btn-outline-primary" (click)="open(character)">Detalles</button>
+                    <button class="btn btn-lg btn-outline-primary" (click)="deleteCharacter(character.id)">Borrar</button>
+                    <button class="btn btn-lg btn-outline-primary" (click)="getCharacter(character)">Actualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+                <div class="form-group">
+                    <label for="nombre">id</label>
+                    <input type="text" class="form-control" id="nombre" [(ngModel)]="id" readonly placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <label for="cif">nombre</label>
+                    <input type="text" class="form-control" id="cif" [(ngModel)]="name" placeholder="CIF">
+                </div>
+                <div class="form-group">
+                    <label for="direccion">status</label>
+                    <input type="text" class="form-control" id="direccion" [(ngModel)]="status" placeholder="Dirección">
+                </div>
+                <div class="form-group">
+                    <label for="nombre">species</label>
+                    <input type="text" class="form-control" id="nombre" [(ngModel)]="species" placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <label for="cif">gender</label>
+                    <input type="text" class="form-control" id="cif" [(ngModel)]="gender" placeholder="CIF">
+                </div>
+                <div class="form-group">
+                    <label for="direccion">origin</label>
+                    <input type="text" class="form-control" id="direccion" [(ngModel)]="origin" placeholder="Dirección">
+                </div>
+                <div class="form-group">
+                    <label for="direccion">location</label>
+                    <input type="text" class="form-control" id="direccion" [(ngModel)]="location" placeholder="Dirección">
+                </div>
+                <div class="form-group">
+                    <label for="direccion">image</label>
+                    <input type="text" class="form-control" id="direccion" [(ngModel)]="image" placeholder="Dirección">
+                </div>
+
+                <button *ngIf="!isUpdate" (click)="newCharacter()" class="btn btn-primary">Guardar</button>
+                <button *ngIf="isUpdate" (click)="updateCharacter()" class="btn btn-primary">Actualizar</button>
+        </div>
+    </div>
+</div>

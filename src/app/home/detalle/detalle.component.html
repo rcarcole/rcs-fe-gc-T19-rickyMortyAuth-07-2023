@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <h4 class="modal-title">Detalles del personaje</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+    <b>Nombre:</b>
+    <p>{{ character.name }}</p>
+    <b>Estado:</b>
+    <p>{{ character.status }}</p>
+    <b>Espécie:</b>
+    <p>{{ character.species }}</p>
+    <b>Género:</b>
+    <p>{{ character.gender }}</p>
+    <b>Orígen:</b>
+    <p>{{ character.origin }}</p>
+    <b>Localización:</b>
+    <p>{{ character.location }}</p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>
