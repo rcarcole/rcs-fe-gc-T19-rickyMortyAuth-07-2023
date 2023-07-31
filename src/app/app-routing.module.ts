@@ -13,9 +13,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, ...canActivate(() => redirectUnauthorizedTo(['/login']))},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'home/about', component: AboutComponent },
-  { path: 'home/characters', component: CharactersComponent },
-  { path: 'home/detalle', component: DetalleComponent }
+  { path: 'home/about', component: AboutComponent, ...canActivate(() => redirectUnauthorizedTo(['/login']))},
+  { path: 'home/characters', component: CharactersComponent, ...canActivate(() => redirectUnauthorizedTo(['/login']))},
+  { path: 'home/detalle', component: DetalleComponent, ...canActivate(() => redirectUnauthorizedTo(['/login']))},
 ];
 
 @NgModule({
